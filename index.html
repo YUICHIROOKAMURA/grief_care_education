@@ -1,0 +1,1756 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>悲嘆とグリーフケア｜就労移行支援スタッフ教育資料</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1a2744;
+    --navy-mid: #243258;
+    --navy-light: #2e3f6e;
+    --amber: #c97a4a;
+    --amber-light: #e09a6a;
+    --amber-pale: #f5e6d8;
+    --slate: #e8edf5;
+    --slate-mid: #c8d3e8;
+    --slate-dark: #8899bb;
+    --cream: #faf8f4;
+    --white: #ffffff;
+    --text-dark: #1a2744;
+    --text-mid: #3d4f72;
+    --text-light: #6b7fa8;
+    --green: #4a8c6e;
+    --green-light: #e8f4ef;
+    --red: #b85050;
+    --red-light: #f5eaea;
+    --yellow: #c4953a;
+    --yellow-light: #fdf3e1;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--cream);
+    color: var(--text-dark);
+    line-height: 1.8;
+    font-size: 15px;
+  }
+
+  /* ===== HERO ===== */
+  .hero {
+    background: var(--navy);
+    color: var(--white);
+    padding: 80px 24px 72px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -80px; right: -80px;
+    width: 400px; height: 400px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(201,122,74,0.18) 0%, transparent 70%);
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -60px; left: -60px;
+    width: 300px; height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(46,63,110,0.6) 0%, transparent 70%);
+  }
+  .hero-inner { max-width: 760px; margin: 0 auto; position: relative; z-index: 1; }
+  .hero-tag {
+    display: inline-block;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    color: var(--amber-light);
+    border: 1px solid rgba(201,122,74,0.5);
+    padding: 4px 12px;
+    border-radius: 2px;
+    margin-bottom: 24px;
+  }
+  .hero h1 {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(26px, 5vw, 38px);
+    font-weight: 700;
+    line-height: 1.45;
+    margin-bottom: 20px;
+    letter-spacing: 0.02em;
+  }
+  .hero-sub {
+    font-size: 15px;
+    color: rgba(255,255,255,0.72);
+    max-width: 560px;
+    line-height: 1.9;
+    margin-bottom: 36px;
+  }
+  .hero-meta {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .hero-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: rgba(255,255,255,0.6);
+  }
+  .hero-meta-item svg { opacity: 0.7; }
+
+  /* ===== SCROLL INDICATOR ===== */
+  .scroll-hint {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 24px;
+    color: rgba(255,255,255,0.4);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+  }
+  .scroll-arrow {
+    width: 1px;
+    height: 32px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0.3));
+    animation: scrollPulse 2s ease-in-out infinite;
+  }
+  @keyframes scrollPulse {
+    0%, 100% { opacity: 0.3; transform: scaleY(0.8); }
+    50% { opacity: 0.8; transform: scaleY(1); }
+  }
+
+  /* ===== SECTION WRAPPER ===== */
+  .section {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 64px 24px;
+  }
+
+  .section-divider {
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--slate-mid), transparent);
+    margin: 0;
+  }
+
+  /* ===== SECTION HEADER ===== */
+  .section-num {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    color: var(--amber);
+    margin-bottom: 8px;
+  }
+  .section-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(20px, 4vw, 26px);
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.5;
+    margin-bottom: 12px;
+  }
+  .section-lead {
+    font-size: 14px;
+    color: var(--text-light);
+    margin-bottom: 36px;
+    line-height: 1.9;
+    max-width: 600px;
+  }
+
+  /* ===== CARDS ===== */
+  .card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid rgba(200,211,232,0.6);
+    box-shadow: 0 2px 8px rgba(26,39,68,0.05);
+  }
+  .card-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* ===== LOSS MAP ===== */
+  .loss-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  @media (max-width: 480px) { .loss-grid { grid-template-columns: 1fr; } }
+  .loss-item {
+    background: var(--white);
+    border-radius: 10px;
+    padding: 16px 18px;
+    border-left: 3px solid var(--amber);
+    box-shadow: 0 1px 4px rgba(26,39,68,0.06);
+  }
+  .loss-item-head {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--amber);
+    margin-bottom: 4px;
+  }
+  .loss-item-body {
+    font-size: 13px;
+    color: var(--text-mid);
+    line-height: 1.7;
+  }
+
+  .kbc-callout {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+    border-radius: 12px;
+    padding: 20px 24px;
+    color: var(--white);
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .kbc-callout svg { flex-shrink: 0; margin-top: 2px; }
+  .kbc-callout-text { font-size: 14px; line-height: 1.8; color: rgba(255,255,255,0.88); }
+  .kbc-callout-text strong { color: var(--amber-light); }
+
+  /* ===== 4 DIMENSIONS ===== */
+  .dim-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  @media (max-width: 480px) { .dim-grid { grid-template-columns: 1fr; } }
+  .dim-card {
+    border-radius: 12px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  .dim-card::before {
+    content: '';
+    position: absolute;
+    top: -20px; right: -20px;
+    width: 80px; height: 80px;
+    border-radius: 50%;
+    opacity: 0.12;
+  }
+  .dim-card.emotion { background: #f0f4ff; }
+  .dim-card.emotion::before { background: #4a6fa5; }
+  .dim-card.body { background: #f0f9f4; }
+  .dim-card.body::before { background: #4a8c6e; }
+  .dim-card.cognition { background: #fdf5e8; }
+  .dim-card.cognition::before { background: #c4953a; }
+  .dim-card.behavior { background: #fdf0ec; }
+  .dim-card.behavior::before { background: #c97a4a; }
+  .dim-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+  }
+  .dim-card.emotion .dim-label { color: #3a5a9a; }
+  .dim-card.body .dim-label { color: #3a7a5e; }
+  .dim-card.cognition .dim-label { color: #a07820; }
+  .dim-card.behavior .dim-label { color: #a05a30; }
+  .dim-card-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--navy);
+  }
+  .dim-examples {
+    list-style: none;
+    font-size: 13px;
+    color: var(--text-mid);
+    line-height: 1.8;
+  }
+  .dim-examples li::before {
+    content: '— ';
+    color: var(--slate-dark);
+  }
+
+  .grief-note {
+    background: var(--slate);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-top: 16px;
+    font-size: 13.5px;
+    color: var(--text-mid);
+    line-height: 1.8;
+    border-left: 3px solid var(--slate-dark);
+  }
+
+  /* ===== KUBLER SECTION ===== */
+  .stage-flow {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+    margin-bottom: 24px;
+  }
+  .stage-row {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+  }
+  .stage-connector {
+    width: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  .stage-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--amber);
+    border: 2px solid var(--white);
+    box-shadow: 0 0 0 2px var(--amber);
+    margin-top: 18px;
+    flex-shrink: 0;
+  }
+  .stage-line {
+    width: 2px;
+    flex: 1;
+    background: linear-gradient(to bottom, var(--amber), var(--slate-mid));
+    margin: 0 auto;
+  }
+  .stage-line.last { background: transparent; }
+  .stage-content {
+    flex: 1;
+    background: var(--white);
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin-bottom: 12px;
+    border: 1px solid var(--slate-mid);
+  }
+  .stage-name {
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--navy);
+    margin-bottom: 3px;
+  }
+  .stage-desc {
+    font-size: 13px;
+    color: var(--text-mid);
+    line-height: 1.7;
+  }
+
+  .critique-box {
+    background: var(--red-light);
+    border-radius: 12px;
+    padding: 20px 24px;
+    border-left: 4px solid var(--red);
+    margin-top: 8px;
+  }
+  .critique-title {
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--red);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .critique-body {
+    font-size: 13.5px;
+    color: #5a3030;
+    line-height: 1.8;
+  }
+  .critique-list {
+    margin: 8px 0 0 16px;
+    font-size: 13px;
+    color: #5a3030;
+    line-height: 1.9;
+  }
+
+  /* ===== THREE MODELS ===== */
+  .model-card {
+    background: var(--white);
+    border-radius: 14px;
+    padding: 0;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border: 1px solid var(--slate-mid);
+    box-shadow: 0 2px 12px rgba(26,39,68,0.06);
+  }
+  .model-header {
+    padding: 18px 24px;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+  }
+  .model-icon-wrap {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .model-meta { flex: 1; }
+  .model-num {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    margin-bottom: 2px;
+  }
+  .model-name {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.4;
+  }
+  .model-author {
+    font-size: 12px;
+    color: var(--text-light);
+    margin-top: 2px;
+  }
+  .model-body {
+    padding: 0 24px 20px;
+  }
+  .model-desc {
+    font-size: 14px;
+    color: var(--text-mid);
+    line-height: 1.85;
+    margin-bottom: 14px;
+  }
+
+  /* Worden tasks */
+  .worden-tasks {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  @media (max-width: 480px) { .worden-tasks { grid-template-columns: 1fr; } }
+  .task-item {
+    background: #f0f4ff;
+    border-radius: 8px;
+    padding: 12px 14px;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  .task-num {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--navy);
+    color: var(--white);
+    font-size: 11px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .task-text { font-size: 13px; color: var(--text-mid); line-height: 1.7; }
+
+  /* Continuing bonds */
+  .bonds-comparison {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  @media (max-width: 480px) { .bonds-comparison { grid-template-columns: 1fr; } }
+  .bonds-old {
+    background: var(--red-light);
+    border-radius: 8px;
+    padding: 14px;
+  }
+  .bonds-new {
+    background: var(--green-light);
+    border-radius: 8px;
+    padding: 14px;
+  }
+  .bonds-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+  }
+  .bonds-old .bonds-label { color: var(--red); }
+  .bonds-new .bonds-label { color: var(--green); }
+  .bonds-content { font-size: 13px; color: var(--text-mid); line-height: 1.75; }
+
+  /* ===== DUAL PROCESS ===== */
+  .dpm-visual {
+    background: var(--navy);
+    border-radius: 14px;
+    padding: 28px;
+    margin-bottom: 20px;
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+  }
+  .dpm-visual::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 80% 20%, rgba(201,122,74,0.15) 0%, transparent 60%);
+  }
+  .dpm-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 24px;
+    color: rgba(255,255,255,0.9);
+    position: relative;
+    z-index: 1;
+  }
+  .dpm-poles {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 16px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  .dpm-pole {
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.15);
+  }
+  .dpm-pole-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+  }
+  .dpm-pole.loss .dpm-pole-label { color: var(--amber-light); }
+  .dpm-pole.restore .dpm-pole-label { color: #7ec8a0; }
+  .dpm-pole-name {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 10px;
+  }
+  .dpm-pole-items {
+    list-style: none;
+    font-size: 12px;
+    color: rgba(255,255,255,0.7);
+    text-align: left;
+    line-height: 1.9;
+  }
+  .dpm-middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+  .dpm-arrow {
+    font-size: 20px;
+    color: rgba(255,255,255,0.4);
+    line-height: 1;
+  }
+  .dpm-osc-label {
+    font-size: 10px;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 0.08em;
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    display: none;
+  }
+
+  .dpm-oscillation {
+    background: var(--amber-pale);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-bottom: 16px;
+    border: 1px solid rgba(201,122,74,0.3);
+  }
+  .dpm-osc-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--amber);
+    margin-bottom: 6px;
+  }
+  .dpm-osc-body {
+    font-size: 13.5px;
+    color: var(--text-mid);
+    line-height: 1.85;
+  }
+
+  .dpm-stagnation {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  @media (max-width: 480px) { .dpm-stagnation { grid-template-columns: 1fr; } }
+  .stag-item {
+    border-radius: 10px;
+    padding: 14px 16px;
+  }
+  .stag-item.over-loss { background: var(--red-light); border: 1px solid #e0c0c0; }
+  .stag-item.over-restore { background: var(--yellow-light); border: 1px solid #e0d0a0; }
+  .stag-label { font-size: 11px; font-weight: 700; margin-bottom: 6px; letter-spacing: 0.08em; }
+  .stag-item.over-loss .stag-label { color: var(--red); }
+  .stag-item.over-restore .stag-label { color: var(--yellow); }
+  .stag-body { font-size: 13px; color: var(--text-mid); line-height: 1.75; }
+
+  /* ===== PROLONGED GRIEF ===== */
+  .timeline-bar {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 20px;
+    border: 1px solid var(--slate-mid);
+  }
+  .timeline-track {
+    position: relative;
+    height: 8px;
+    background: var(--slate);
+    border-radius: 4px;
+    margin: 20px 0 28px;
+  }
+  .timeline-normal {
+    position: absolute;
+    left: 0; top: 0;
+    height: 100%;
+    width: 65%;
+    background: linear-gradient(to right, var(--green), var(--green-light));
+    border-radius: 4px;
+  }
+  .timeline-threshold {
+    position: absolute;
+    left: 65%; top: -6px;
+    height: 20px;
+    width: 2px;
+    background: var(--amber);
+  }
+  .timeline-threshold-label {
+    position: absolute;
+    left: 67%;
+    top: -22px;
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--amber);
+    white-space: nowrap;
+  }
+  .timeline-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: var(--text-light);
+  }
+
+  .pg-signs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  @media (max-width: 480px) { .pg-signs { grid-template-columns: 1fr; } }
+  .pg-sign-item {
+    background: var(--red-light);
+    border-radius: 8px;
+    padding: 12px 14px;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    border: 1px solid #e0c8c8;
+  }
+  .pg-sign-text { font-size: 13px; color: #5a3030; line-height: 1.7; }
+
+  .pg-action {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+    border-radius: 12px;
+    padding: 20px 24px;
+    color: var(--white);
+  }
+  .pg-action-title {
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--amber-light);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .pg-action-body {
+    font-size: 13.5px;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.85;
+  }
+
+  /* ===== DO/DON'T ===== */
+  .practice-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+  @media (max-width: 520px) { .practice-grid { grid-template-columns: 1fr; } }
+  .practice-col { }
+  .practice-col-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 10px 14px;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 0;
+  }
+  .do-header { background: var(--green); color: var(--white); }
+  .dont-header { background: var(--red); color: var(--white); }
+  .practice-item {
+    padding: 12px 14px;
+    font-size: 13px;
+    line-height: 1.75;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+  }
+  .do-item { color: #2a5a3a; background: var(--green-light); border-color: #b0d8c0; }
+  .dont-item { color: #5a2a2a; background: var(--red-light); border-color: #e0c0c0; }
+  .do-item:last-child, .dont-item:last-child { border-radius: 0 0 8px 8px; }
+
+  .phrase-box {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 20px 24px;
+    border: 1px solid var(--slate-mid);
+    margin-bottom: 16px;
+  }
+  .phrase-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .phrase-example {
+    background: var(--slate);
+    border-radius: 6px;
+    padding: 10px 14px;
+    font-size: 13px;
+    color: var(--text-mid);
+    line-height: 1.75;
+    margin-bottom: 8px;
+    font-style: italic;
+  }
+  .phrase-why {
+    font-size: 12px;
+    color: var(--text-light);
+    line-height: 1.7;
+  }
+
+  /* ===== SECONDARY GRIEF ===== */
+  .secondary-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 24px;
+    border: 1px solid var(--slate-mid);
+    margin-bottom: 16px;
+  }
+
+  .compassion-fatigue {
+    background: var(--yellow-light);
+    border-radius: 10px;
+    padding: 16px 20px;
+    border: 1px solid rgba(196,149,58,0.3);
+    margin-bottom: 16px;
+  }
+  .cf-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--yellow);
+    margin-bottom: 6px;
+  }
+  .cf-body { font-size: 13.5px; color: var(--text-mid); line-height: 1.85; }
+
+  .self-care-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  @media (max-width: 480px) { .self-care-grid { grid-template-columns: 1fr; } }
+  .self-care-item {
+    background: var(--slate);
+    border-radius: 10px;
+    padding: 14px;
+    text-align: center;
+  }
+  .self-care-icon { margin: 0 auto 8px; display: flex; justify-content: center; }
+  .self-care-label { font-size: 12px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+  .self-care-body { font-size: 11.5px; color: var(--text-light); line-height: 1.6; }
+
+  /* ===== KEY TAKEAWAY ===== */
+  .takeaway {
+    background: var(--navy);
+    border-radius: 14px;
+    padding: 28px 32px;
+    margin-bottom: 20px;
+  }
+  .takeaway-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 16px;
+    text-align: center;
+  }
+  .takeaway-items {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .takeaway-item {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    font-size: 14px;
+    color: rgba(255,255,255,0.88);
+    line-height: 1.8;
+  }
+  .takeaway-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--amber);
+    flex-shrink: 0;
+    margin-top: 9px;
+  }
+
+  /* ===== SOURCES ===== */
+  .sources-section {
+    background: var(--navy);
+    padding: 48px 24px;
+    color: var(--white);
+  }
+  .sources-inner { max-width: 760px; margin: 0 auto; }
+  .sources-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 6px;
+  }
+  .sources-sub { font-size: 13px; color: rgba(255,255,255,0.5); margin-bottom: 28px; }
+  .sources-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .sources-list li {
+    font-size: 13px;
+    color: rgba(255,255,255,0.75);
+    padding: 12px 16px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 8px;
+    border-left: 2px solid rgba(201,122,74,0.5);
+    line-height: 1.75;
+  }
+  .sources-list li a {
+    color: var(--amber-light);
+    text-decoration: none;
+    word-break: break-all;
+  }
+  .sources-list li a:hover { text-decoration: underline; }
+
+  /* ===== FOOTER ===== */
+  .footer {
+    background: #111a30;
+    padding: 20px 24px;
+    text-align: center;
+    font-size: 12px;
+    color: rgba(255,255,255,0.3);
+    letter-spacing: 0.05em;
+  }
+
+  /* ===== UTILITY ===== */
+  .highlight {
+    background: var(--amber-pale);
+    border-radius: 3px;
+    padding: 0 3px;
+    color: var(--amber);
+    font-weight: 700;
+  }
+  .text-amber { color: var(--amber); }
+  .text-navy { color: var(--navy); }
+  .mt-16 { margin-top: 16px; }
+  .mt-24 { margin-top: 24px; }
+
+  /* Inline SVG icon helpers */
+  .icon-wrap { display: inline-flex; align-items: center; justify-content: center; }
+
+  /* Progress dots sidebar */
+  .progress-nav {
+    position: fixed;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 100;
+  }
+  @media (max-width: 600px) { .progress-nav { display: none; } }
+  .prog-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(26,39,68,0.2);
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+  .prog-dot.active {
+    background: var(--amber);
+    transform: scale(1.3);
+  }
+  .prog-dot:hover { background: var(--amber-light); }
+</style>
+</head>
+<body>
+
+<!-- Progress navigation -->
+<nav class="progress-nav" id="progressNav">
+  <div class="prog-dot active" data-target="s0" title="はじめに"></div>
+  <div class="prog-dot" data-target="s1" title="喪失の地図"></div>
+  <div class="prog-dot" data-target="s2" title="グリーフの4層"></div>
+  <div class="prog-dot" data-target="s3" title="段階説の正体"></div>
+  <div class="prog-dot" data-target="s4" title="Worden・継続する絆"></div>
+  <div class="prog-dot" data-target="s5" title="二重過程モデル"></div>
+  <div class="prog-dot" data-target="s6" title="複雑性悲嘆"></div>
+  <div class="prog-dot" data-target="s7" title="実践"></div>
+  <div class="prog-dot" data-target="s8" title="支援者自身"></div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<header class="hero" id="s0">
+  <div class="hero-inner">
+    <div class="hero-tag">就労移行支援スタッフ教育資料</div>
+    <h1>悲嘆（グリーフ）と<br>グリーフケアの理解</h1>
+    <p class="hero-sub">
+      「なぜ立ち直れないのか」ではなく、「喪失にどう向き合っているのか」を理解する。
+      この資料では、悲嘆の本質的なメカニズムと現代の理論的枠組みを通じて、
+      就労移行支援の現場で役立てられる実践的な知識を段階的に整理します。
+    </p>
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        読了時間：約10〜15分
+      </div>
+      <div class="hero-meta-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        対象：就労移行支援スタッフ全員
+      </div>
+      <div class="hero-meta-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        エビデンスベース
+      </div>
+    </div>
+  </div>
+  <div class="scroll-hint">
+    <span>SCROLL</span>
+    <div class="scroll-arrow"></div>
+  </div>
+</header>
+
+<hr class="section-divider">
+
+<!-- ===== S1: 喪失の地図 ===== -->
+<section id="s1">
+<div class="section">
+  <div class="section-num">SECTION 01</div>
+  <h2 class="section-title">喪失は「死別」だけではない<br>就労移行で出会う喪失の地図</h2>
+  <p class="section-lead">
+    グリーフ（悲嘆）は、死別のときだけに生じるものではありません。
+    「大切にしていたもの・なりたかった自分・当たり前の日常」を失うとき、
+    人は程度の差はあれ、必ず何らかのグリーフを経験します。
+    就労移行支援の現場に来る方々は、複数の喪失を同時に抱えていることが少なくありません。
+  </p>
+
+  <div class="loss-grid">
+    <div class="loss-item">
+      <div class="loss-item-head">仕事・キャリアの喪失</div>
+      <div class="loss-item-body">働いていた会社、役職、職務。「自分は○○として働いている人間だ」というアイデンティティごと失うことがある</div>
+    </div>
+    <div class="loss-item">
+      <div class="loss-item-head">健康・身体機能の喪失</div>
+      <div class="loss-item-body">発症・受傷以前の身体、認知機能、エネルギー。「以前の自分」との比較が続く</div>
+    </div>
+    <div class="loss-item">
+      <div class="loss-item-head">将来像・夢の喪失</div>
+      <div class="loss-item-body">「あのキャリアパスに進むはずだった自分」「結婚して子どもを持つはずだった自分」という理想の未来</div>
+    </div>
+    <div class="loss-item">
+      <div class="loss-item-head">役割・居場所の喪失</div>
+      <div class="loss-item-body">職場での自分の役割、同僚との関係、社会的なつながり。孤立感として現れることが多い</div>
+    </div>
+    <div class="loss-item">
+      <div class="loss-item-head">障害告知による喪失</div>
+      <div class="loss-item-body">「障害のない自分」「普通にできるはずだった自分」の喪失。告知そのものがグリーフの引き金になる</div>
+    </div>
+    <div class="loss-item">
+      <div class="loss-item-head">経済的・生活基盤の喪失</div>
+      <div class="loss-item-body">収入、自立、「自分で稼いでいた」という誇り。実生活の不安と心理的打撃が重なる</div>
+    </div>
+  </div>
+
+  <div class="kbc-callout">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e09a6a" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+    <div class="kbc-callout-text">
+      就労移行の利用者は、来所時点で<strong>複数の喪失が積み重なった状態</strong>にあることが多くあります。
+      「なぜこんなに落ち込んでいるのか」という問いへの答えは、多くの場合、
+      一つの出来事ではなく複合的な喪失体験の蓄積の中にあります。
+      <strong>喪失の全体像を把握することが支援の出発点です。</strong>
+    </div>
+  </div>
+</div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ===== S2: グリーフの4層 ===== -->
+<section id="s2">
+<div class="section">
+  <div class="section-num">SECTION 02</div>
+  <h2 class="section-title">グリーフとは何か<br>感情・身体・認知・行動の4層で理解する</h2>
+  <p class="section-lead">
+    悲嘆は「悲しい気持ち」だけではありません。身体症状、思考のパターン変化、
+    行動の変化を含む複合的な反応です。これを「弱さ」や「病気」として捉えるのではなく、
+    愛着の対象を失ったときに生じる<span class="highlight">自然で正常な人間的反応</span>として理解することが基本姿勢です。
+  </p>
+
+  <div class="dim-grid">
+    <div class="dim-card emotion">
+      <div class="dim-label">EMOTIONAL</div>
+      <div class="dim-card-title">感情の層</div>
+      <ul class="dim-examples">
+        <li>深い悲しみ・涙</li>
+        <li>怒り・不満・やるせなさ</li>
+        <li>不安・恐怖・パニック</li>
+        <li>罪悪感・後悔</li>
+        <li>孤独感・空虚感</li>
+        <li>安堵（が罪悪感を呼ぶ）</li>
+      </ul>
+    </div>
+    <div class="dim-card body">
+      <div class="dim-label">PHYSICAL</div>
+      <div class="dim-card-title">身体の層</div>
+      <ul class="dim-examples">
+        <li>疲労感・倦怠感</li>
+        <li>睡眠障害（過眠・不眠）</li>
+        <li>食欲の変化</li>
+        <li>胸の締め付け・息苦しさ</li>
+        <li>頭痛・消化器症状</li>
+        <li>免疫機能の低下</li>
+      </ul>
+    </div>
+    <div class="dim-card cognition">
+      <div class="dim-label">COGNITIVE</div>
+      <div class="dim-card-title">認知の層</div>
+      <ul class="dim-examples">
+        <li>集中力・記憶力の低下</li>
+        <li>喪失したものについて繰り返し考える</li>
+        <li>「なぜ自分が」という問い</li>
+        <li>意味・目的の喪失感</li>
+        <li>将来への悲観的な見通し</li>
+        <li>故人の幻聴・幻視（死別の場合）</li>
+      </ul>
+    </div>
+    <div class="dim-card behavior">
+      <div class="dim-label">BEHAVIORAL</div>
+      <div class="dim-card-title">行動の層</div>
+      <ul class="dim-examples">
+        <li>社会的引きこもり</li>
+        <li>喪失を思い出させるものを避ける</li>
+        <li>活動量・意欲の低下</li>
+        <li>泣き崩れる・ぼーっとする</li>
+        <li>過活動（悲しみから逃げる）</li>
+        <li>喪失した人・もの・場所を探す行動</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="grief-note">
+    <strong>重要な視点：</strong>グリーフの表れ方は個人差が非常に大きく、
+    「泣かない＝悲しんでいない」「元気そう＝立ち直った」とは限りません。
+    また、感情を強く表出する人と内に抑える人のどちらが「正常か」という問いに意味はなく、
+    どちらも本物のグリーフです（Stroebe et al., 1996）。
+    文化的背景や性別規範も、グリーフの表出の仕方に強く影響します。
+  </div>
+</div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ===== S3: 段階説 ===== -->
+<section id="s3">
+<div class="section">
+  <div class="section-num">SECTION 03</div>
+  <h2 class="section-title">「5段階説」の正体と限界<br>Kübler-Rossを正しく使う</h2>
+  <p class="section-lead">
+    悲嘆の研究でもっとも広く知られているのが、エリザベス・キューブラー＝ロスが1969年に提唱した
+    「死の受容の5段階モデル」です。広く普及している一方で、深刻な誤解も広まっています。
+    正確に理解することが、支援の質を左右します。
+  </p>
+
+  <div class="stage-flow">
+    <div class="stage-row">
+      <div class="stage-connector">
+        <div class="stage-dot"></div>
+        <div class="stage-line"></div>
+      </div>
+      <div class="stage-content">
+        <div class="stage-name">① 否認（Denial）</div>
+        <div class="stage-desc">「そんなはずはない」「きっと間違いだ」。現実の衝撃から自分を守るための心理的緩衝材として機能する</div>
+      </div>
+    </div>
+    <div class="stage-row">
+      <div class="stage-connector">
+        <div class="stage-dot"></div>
+        <div class="stage-line"></div>
+      </div>
+      <div class="stage-content">
+        <div class="stage-name">② 怒り（Anger）</div>
+        <div class="stage-desc">「なぜ自分が」「あの医者が悪い」「神様が許せない」。失望・無力感が怒りという形をとることが多い</div>
+      </div>
+    </div>
+    <div class="stage-row">
+      <div class="stage-connector">
+        <div class="stage-dot"></div>
+        <div class="stage-line"></div>
+      </div>
+      <div class="stage-content">
+        <div class="stage-name">③ 取引（Bargaining）</div>
+        <div class="stage-desc">「もし○○できれば元に戻れるかもしれない」。神や運命と条件交渉しようとする。「あのときこうしていれば」という後悔もここに含まれる</div>
+      </div>
+    </div>
+    <div class="stage-row">
+      <div class="stage-connector">
+        <div class="stage-dot"></div>
+        <div class="stage-line"></div>
+      </div>
+      <div class="stage-content">
+        <div class="stage-name">④ 抑うつ（Depression）</div>
+        <div class="stage-desc">深い悲しみ・意欲低下・引きこもり。これは「病的なうつ」ではなく、喪失の深刻さに見合った自然な反応</div>
+      </div>
+    </div>
+    <div class="stage-row">
+      <div class="stage-connector">
+        <div class="stage-dot"></div>
+        <div class="stage-line last"></div>
+      </div>
+      <div class="stage-content">
+        <div class="stage-name">⑤ 受容（Acceptance）</div>
+        <div class="stage-desc">喪失の現実を認め、それとともに生きていくことを選び取る。「諦め」ではなく「折り合い」に近い</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="critique-box">
+    <div class="critique-title">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+      批判的視点：このモデルの重大な限界
+    </div>
+    <div class="critique-body">
+      このモデルは、末期がん患者との面接から導かれたものですが、<strong>キューブラー＝ロス自身は「すべての人がこの順序で段階を進む」とは述べていませんでした</strong>（On Grief and Grieving, 2005）。
+      しかし後に、このモデルは「段階を順番に経て受容へ至るべき」というロードマップとして誤解・流用されるようになりました。
+      <ul class="critique-list">
+        <li>段階は直線的ではなく、行ったり来たりすることが普通</li>
+        <li>すべての段階を経験するとは限らない</li>
+        <li>「受容」が最終目標として固定化されると、利用者に「早く受容せよ」という暗黙の圧力になる</li>
+        <li>Maciejewski et al.（2007, JAMA）は段階説とおおむね一致する順序を報告したが、複雑性悲嘆の18%を事前除外しており方法論への批判も多く、後続研究では支持が限定的</li>
+        <li>死別以外の喪失（障害告知、離職など）への適用は特に慎重であるべき</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="grief-note mt-16">
+    <strong>現場での活用ポイント：</strong>このモデルは「こういう感情が出てくることがある」という対話のきっかけとして使うなら有用です。
+    ただし「今あなたは第何段階」と当てはめることは、支援者の理解を固定化させ、
+    利用者の個別性を見えにくくします。あくまで、現れうる感情の言語化ツールとして使いましょう。
+  </div>
+</div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ===== S4: 現代の3モデル ===== -->
+<section id="s4">
+<div class="section">
+  <div class="section-num">SECTION 04</div>
+  <h2 class="section-title">現代の2つのモデル①②<br>Wordenの課題モデル・継続する絆</h2>
+  <p class="section-lead">
+    段階説の限界を受けて、より精度の高いモデルが発展してきました。
+    このセクションでは2つのモデルを、次のセクション（Section 05）ではもっとも実践的な
+    「二重過程モデル」を詳しく取り上げます。
+  </p>
+
+  <!-- Model 1: Worden -->
+  <div class="model-card">
+    <div class="model-header">
+      <div class="model-icon-wrap" style="background:#e8eeff;">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3a5a9a" stroke-width="1.8"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+      </div>
+      <div class="model-meta">
+        <div class="model-num" style="color:#3a5a9a;">MODEL 01</div>
+        <div class="model-name">悲嘆の課題モデル</div>
+        <div class="model-author">William Worden（1982年初版 / 第5版 2018年）</div>
+      </div>
+    </div>
+    <div class="model-body">
+      <p class="model-desc">
+        「段階（stage）」を「課題（task）」に読み替えることで、悲嘆を<strong>受動的に通過するものではなく、
+        能動的に取り組むプロセス</strong>として再定義したモデルです。
+        課題は順番通りに完了しなくてもよく、何度も戻ってくることもあります。
+      </p>
+      <div class="worden-tasks">
+        <div class="task-item">
+          <div class="task-num">T1</div>
+          <div class="task-text"><strong>喪失の現実を受け入れる</strong><br>「本当に失ったのだ」という事実を知的にも感情的にも認識する</div>
+        </div>
+        <div class="task-item">
+          <div class="task-num">T2</div>
+          <div class="task-text"><strong>悲嘆の痛みを経験する</strong><br>悲しみや苦痛を回避せず、実際に感じ・表現する機会をもつ</div>
+        </div>
+        <div class="task-item">
+          <div class="task-num">T3</div>
+          <div class="task-text"><strong>変化した環境に適応する</strong><br>喪失後の外的・内的・精神的環境の変化に対応する能力を育てる</div>
+        </div>
+        <div class="task-item">
+          <div class="task-num">T4</div>
+          <div class="task-text"><strong>繋がりを変えながら前へ進む</strong><br>失ったものとの関係を完全に断つのではなく、新しい形で繋ぎ直す</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Model 2: Continuing Bonds -->
+  <div class="model-card">
+    <div class="model-header">
+      <div class="model-icon-wrap" style="background:#e8f4ef;">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4a8c6e" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      </div>
+      <div class="model-meta">
+        <div class="model-num" style="color:#4a8c6e;">MODEL 02</div>
+        <div class="model-name">継続する絆（Continuing Bonds）</div>
+        <div class="model-author">Klass, Silverman & Nickman（1996）</div>
+      </div>
+    </div>
+    <div class="model-body">
+      <p class="model-desc">
+        従来の悲嘆理論は「失ったものとの絆を断ち切ることが回復」という考えを前提にしていました。
+        このモデルはその仮定を根本から問い直し、<strong>「関係は終わらず、形が変わる」</strong>という視点を提示します。
+        死別した故人について話し続けること、障害以前の自分を懐かしむことは、
+        異常な執着ではなく、健康的な悲嘆の一部です。
+      </p>
+      <div class="bonds-comparison">
+        <div class="bonds-old">
+          <div class="bonds-label">旧来の考え方</div>
+          <div class="bonds-content">
+            喪失からの「回復」＝失ったものへの執着を断ち切ること。<br>
+            前を向けない人は「回復が遅れている」と見なされた
+          </div>
+        </div>
+        <div class="bonds-new">
+          <div class="bonds-label">継続する絆の視点</div>
+          <div class="bonds-content">
+            故人や失ったものとの関係は終わらず、<strong>新しい意味と形で継続する</strong>。<br>
+            思い出すこと・語ること・記念することは自然で健全
+          </div>
+        </div>
+      </div>
+      <div class="grief-note mt-16">
+        <strong>就労移行での示唆：</strong>「以前の職場のことばかり話す」「障害を受け入れられないでいる」という状態を、
+        「前を向けていない問題」として介入するのではなく、
+        かつての自分・働いていた自分への愛着と意味付けのプロセスとして受け止めることが出発点になります。
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ===== S5: 二重過程モデル（最重要） ===== -->
+<section id="s5">
+<div class="section">
+  <div class="section-num">SECTION 05 ── 最重要</div>
+  <h2 class="section-title">「揺れること」が回復である<br>二重過程モデル（DPM）の実践的理解</h2>
+  <p class="section-lead">
+    就労移行支援スタッフにとって、もっとも実践的に活用できる現代の悲嘆理論がこれです。
+    Margaret Stroebe と Henk Schut が1999年に提唱した「二重過程モデル（Dual Process Model）」は、
+    悲嘆の日常的なダイナミクスをシンプルかつ正確に説明しています。
+  </p>
+
+  <div class="dpm-visual">
+    <div class="dpm-title">二重過程モデル（Dual Process Model of Coping with Bereavement）</div>
+    <div class="dpm-poles">
+      <div class="dpm-pole loss">
+        <div class="dpm-pole-label">LOSS-ORIENTED</div>
+        <div class="dpm-pole-name">喪失志向</div>
+        <ul class="dpm-pole-items">
+          <li>悲しみを感じる</li>
+          <li>失ったものについて考える</li>
+          <li>泣く・ぼーっとする</li>
+          <li>失った関係・役割を惜しむ</li>
+          <li>「なぜ自分が」と問い続ける</li>
+        </ul>
+      </div>
+      <div class="dpm-middle">
+        <div class="dpm-arrow">⇄</div>
+        <div style="font-size:10px; color:rgba(255,255,255,0.5); text-align:center; margin-top:4px;">揺れ動く<br>Oscillation</div>
+      </div>
+      <div class="dpm-pole restore">
+        <div class="dpm-pole-label">RESTORATION-ORIENTED</div>
+        <div class="dpm-pole-name">回復志向</div>
+        <ul class="dpm-pole-items">
+          <li>新しいことに取り組む</li>
+          <li>悲嘆から一時的に気をそらす</li>
+          <li>新しいアイデンティティを模索</li>
+          <li>日常生活の再構築</li>
+          <li>将来について考える</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="dpm-oscillation">
+    <div class="dpm-osc-title">「揺れること」こそが健全な悲嘆</div>
+    <div class="dpm-osc-body">
+      このモデルの核心は「Oscillation（揺れ動き）」です。
+      健康的な悲嘆では、喪失について深く悲しむ時間と、
+      日常や新しいことへ向かう時間の<strong>あいだを行ったり来たりすること</strong>が自然に起こります。
+      これは「意志の弱さ」でも「ぶれている」ことでもなく、
+      人間が喪失を処理するための適応的なメカニズムです。
+      一日の中でも、時間帯によって大きく異なる状態になることがあります。
+    </div>
+  </div>
+
+  <div class="section-title" style="font-size:16px; margin-bottom:16px;">どちらかに固まると問題が生じる</div>
+  <div class="dpm-stagnation">
+    <div class="stag-item over-loss">
+      <div class="stag-label">喪失志向に固まりすぎると…</div>
+      <div class="stag-body">
+        悲しみの中から出られなくなる。新しい活動や関係への意欲が生まれない。
+        日常生活の再構築が進まない。この状態が長期化すると複雑性悲嘆のリスクが高まる。
+      </div>
+    </div>
+    <div class="stag-item over-restore">
+      <div class="stag-label">回復志向に固まりすぎると…</div>
+      <div class="stag-body">
+        悲しみや喪失感を回避し続ける。感情を抑圧することで、
+        後になって予期せぬ形で感情が爆発したり、心身症として現れることがある。
+      </div>
+    </div>
+  </div>
+
+  <div class="grief-note mt-16">
+    <strong>現場での活用：</strong>利用者が「今日は何もやる気が出ない」と言う日も、「今日は就活の話ができた」と言う日もあります。
+    どちらも大切なプロセスです。「元気な日と落ち込む日の差が激しい」のは、
+    このモデルでは「正常な揺れ動き」として理解できます。
+    スタッフ自身も「どちらの状態にいるかを把握する」視点を持てると、利用者への関わりが変わります。
+  </div>
+</div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ===== S6: 複雑性悲嘆 ===== -->
+<section id="s6">
+<div class="section">
+  <div class="section-num">SECTION 06</div>
+  <h2 class="section-title">複雑性悲嘆・遷延性悲嘆障害を見分ける<br>専門家連携のサイン</h2>
+  <p class="section-lead">
+    悲嘆は自然な反応であり、多くの場合、時間・環境・関係性の中で変化していきます。
+    しかし一部のケースでは、長期にわたり強烈な悲嘆が続き、生活機能に深刻な支障をきたします。
+    これが「遷延性悲嘆障害（Prolonged Grief Disorder: PGD）」であり、
+    <span class="highlight">DSM-5-TR（2022年）で正式に診断基準が設けられました。</span>
+  </p>
+
+  <div class="timeline-bar">
+    <div style="font-size:13px; font-weight:700; color:var(--navy); margin-bottom:4px;">診断の時間基準（死別の場合）</div>
+    <div style="font-size:12px; color:var(--text-light); margin-bottom:12px;">喪失から12ヶ月以上（子どもは6ヶ月以上）強烈な悲嘆症状が持続する場合</div>
+    <div class="timeline-track">
+      <div class="timeline-normal"></div>
+      <div class="timeline-threshold"></div>
+      <div class="timeline-threshold-label">12ヶ月</div>
+    </div>
+    <div class="timeline-labels">
+      <span>喪失直後</span>
+      <span>6ヶ月</span>
+      <span>1年</span>
+      <span>それ以降</span>
+    </div>
+    <div class="grief-note" style="margin-top:16px;">
+      ただし「12ヶ月経過したから病的」「それ以前なら正常」という単純な判定ではありません。
+      <strong>症状の強度・持続性・生活への影響</strong>の3つを総合的に評価します。
+      また、死別以外の喪失（離職、障害告知など）へのPGDの適用については
+      今後の研究が必要な段階です。
+    </div>
+  </div>
+
+  <div class="section-title" style="font-size:16px; margin-bottom:12px;">注意すべきサイン（支援者が気づけること）</div>
+  <div class="pg-signs">
+    <div class="pg-sign-item">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b85050" stroke-width="2" style="flex-shrink:0; margin-top:2px;"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+      <div class="pg-sign-text">喪失した人・状況への強烈な思慕・渇望が何ヶ月も続く</div>
+    </div>
+    <div class="pg-sign-item">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b85050" stroke-width="2" style="flex-shrink:0; margin-top:2px;"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+      <div class="pg-sign-text">将来への意欲がなく、「生きていても意味がない」という発言が続く</div>
+    </div>
+    <div class="pg-sign-item">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b85050" stroke-width="2" style="flex-shrink:0; margin-top:2px;"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+      <div class="pg-sign-text">喪失を想起させる状況・場所・人を強く回避し、生活が縮小している</div>
+    </div>
+    <div class="pg-sign-item">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b85050" stroke-width="2" style="flex-shrink:0; margin-top:2px;"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+      <div class="pg-sign-text">「自分は喪失のせいで人生が完全に終わった」という固定した信念</div>
+    </div>
+    <div class="pg-sign-item">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b85050" stroke-width="2" style="flex-shrink:0; margin-top:2px;"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+      <div class="pg-sign-text">ほぼすべての日常活動への関与が困難・不可能な状態が続く</div>
+    </div>
+    <div class="pg-sign-item">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b85050" stroke-width="2" style="flex-shrink:0; margin-top:2px;"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+      <div class="pg-sign-text">強烈な怒り・苦しみが時間とともに和らがず、むしろ強まっている</div>
+    </div>
+  </div>
+
+  <div class="pg-action">
+    <div class="pg-action-title">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e09a6a" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      スタッフとして取れるアクション
+    </div>
+    <div class="pg-action-body">
+      複雑性悲嘆・PGDは、就労移行スタッフが診断や治療を行うものではありません。
+      ただし、上記のサインに気づいたとき、<strong>①担当スタッフ間での情報共有、
+      ②サービス管理責任者への報告、③医療機関・主治医との連携の検討</strong>を行うことは
+      スタッフの重要な役割です。
+      「うつ病への対応と似ている部分があるが、グリーフ特有の介入（Complicated Grief Treatment: CGT）が
+      標準的な対人療法より高い反応率を示すことが複数のRCTで確認されているため」（Shear et al., 2005; 2014）、
+      専門家連携の際には「グリーフに関連した状態が続いている」という情報を確実に伝えてください。
+    </div>
+  </div>
+</div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ===== S7: 実践 ===== -->
+<section id="s7">
+<div class="section">
+  <div class="section-num">SECTION 07</div>
+  <h2 class="section-title">スタッフとして「すること」と「しないこと」<br>関わりの実践ガイド</h2>
+  <p class="section-lead">
+    グリーフを抱える利用者への関わりには、特別な技術よりも、
+    基本的な姿勢と「やってしまいがちな言葉・行動を知ること」が重要です。
+  </p>
+
+  <div class="practice-grid">
+    <div class="practice-col">
+      <div class="practice-col-header do-header">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        すること（DO）
+      </div>
+      <div class="practice-item do-item">
+        <strong>ただ、そばにいる。</strong><br>
+        問題解決しようとせず、一緒にいることそのものが支援になる場合がある
+      </div>
+      <div class="practice-item do-item">
+        <strong>感情に名前をつけるのを手伝う。</strong><br>
+        「怒りのような気持ち、ですか？」と言語化を促すことで、感情の处理が始まる
+      </div>
+      <div class="practice-item do-item">
+        <strong>揺れ動くことを正常化する。</strong><br>
+        「昨日と今日で気持ちが違うのは自然なことです」と伝える
+      </div>
+      <div class="practice-item do-item">
+        <strong>喪失の話を避けない。</strong><br>
+        「その仕事、好きだったんですね」と言うことができる。触れないほうが孤立感を生む
+      </div>
+      <div class="practice-item do-item">
+        <strong>自分のペースを尊重する。</strong><br>
+        「いつまでに立ち直る」というタイムラインは利用者が決めること
+      </div>
+    </div>
+    <div class="practice-col">
+      <div class="practice-col-header dont-header">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        しないこと（DON'T）
+      </div>
+      <div class="practice-item dont-item">
+        <strong>「早く元気になってほしい」を押しつけない。</strong><br>
+        スタッフ自身が不安・焦りを感じているとき、利用者を回復させようとしすぎる
+      </div>
+      <div class="practice-item dont-item">
+        <strong>比較で励まさない。</strong><br>
+        「もっと大変な人もいるんだから」は否定として伝わる。悲嘆の比較に意味はない
+      </div>
+      <div class="practice-item dont-item">
+        <strong>意味や教訓を急がない。</strong><br>
+        「この経験があなたを成長させる」は、当人が感じたときにのみ意味をもつ
+      </div>
+      <div class="practice-item dont-item">
+        <strong>「受け入れてください」と促さない。</strong><br>
+        受容を要求することは、まだ感じている痛みを否定することになる
+      </div>
+      <div class="practice-item dont-item">
+        <strong>「わかります」と言いすぎない。</strong><br>
+        個人の喪失体験は唯一無二。「それは辛いですね」のほうが誠実
+      </div>
+    </div>
+  </div>
+
+  <div class="phrase-box">
+    <div class="phrase-title">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      使えるフレーズ例
+    </div>
+    <div class="phrase-example">「それは本当に辛かったんですね。もう少し聞かせてもらえますか」</div>
+    <div class="phrase-why">→ 評価・解釈を加えず、相手の体験を中心に置く。続きを話せる扉を開く</div>
+    <div class="phrase-example" style="margin-top:10px;">「昨日と今日で気持ちが違うのは、不思議なことじゃないですよ。そういうものだと思います」</div>
+    <div class="phrase-why">→ 二重過程モデルの「揺れ動き」を自然に正常化する言葉</div>
+    <div class="phrase-example" style="margin-top:10px;">「以前の職場のことを大切に思っているんですね。それがあったから今ここにいる、でもあるんですよね」</div>
+    <div class="phrase-why">→ 継続する絆の視点。過去を失ったものとしてだけでなく、意味を持つものとして扱う</div>
+    <div class="phrase-example" style="margin-top:10px;">「今、どちらのモードに近いですか？悲しい気持ちが強い感じですか、それとも少し前向きな気持ちが出てきている感じ？」</div>
+    <div class="phrase-why">→ 二重過程モデルの言葉を使って、利用者が自分の状態を把握できるよう促す</div>
+  </div>
+</div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ===== S8: 支援者自身 ===== -->
+<section id="s8">
+<div class="section">
+  <div class="section-num">SECTION 08</div>
+  <h2 class="section-title">支援者自身のグリーフに気づく<br>二次的トラウマティック・ストレスと自己ケア</h2>
+  <p class="section-lead">
+    グリーフを抱える利用者と継続的に関わるスタッフは、
+    利用者の痛みや喪失体験に共鳴・影響を受けることがあります。
+    これを「二次的トラウマティック・ストレス（Secondary Traumatic Stress）」または
+    「共感疲労（Compassion Fatigue）」と呼びます。
+  </p>
+
+  <div class="compassion-fatigue">
+    <div class="cf-title">共感疲労とは何か</div>
+    <div class="cf-body">
+      他者のトラウマや苦しみに繰り返し触れることで生じる、感情的・身体的・認知的な消耗状態です。
+      「燃え尽き症候群（バーンアウト）」とは異なり、<strong>共感能力が高い支援者ほどなりやすい</strong>という特徴があります。
+      「利用者のことが頭から離れない」「支援の場面が夢に出てくる」「感情的に麻痺したように感じる」などのサインに注意してください（Figley, 1995）。
+    </div>
+  </div>
+
+  <div class="secondary-card">
+    <div class="card-title">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+      スタッフ自身が知っておくべきサイン
+    </div>
+    <div class="dim-grid" style="margin-top:16px;">
+      <div class="dim-card emotion">
+        <div class="dim-label">感情的サイン</div>
+        <ul class="dim-examples">
+          <li>利用者への過度の心配</li>
+          <li>感情的な距離を置きすぎる</li>
+          <li>支援後の強い消耗感</li>
+          <li>自分自身の喪失体験の再活性化</li>
+        </ul>
+      </div>
+      <div class="dim-card cognition">
+        <div class="dim-label">認知・行動サイン</div>
+        <ul class="dim-examples">
+          <li>支援のことが頭から離れない</li>
+          <li>無力感・「何も役に立てていない」</li>
+          <li>利用者の悲嘆を「早く解決したい」</li>
+          <li>職場への意欲の低下</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="self-care-grid">
+    <div class="self-care-item">
+      <div class="self-care-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="1.6"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      </div>
+      <div class="self-care-label">境界線を意識する</div>
+      <div class="self-care-body">「利用者の痛みを共感する」と「引き受ける」は異なる。感情的境界は支援の持続性を守る</div>
+    </div>
+    <div class="self-care-item">
+      <div class="self-care-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="1.6"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      </div>
+      <div class="self-care-label">スーパービジョンを使う</div>
+      <div class="self-care-body">困難ケースを一人で抱え込まない。チームで共有することで視点も責任も分散できる</div>
+    </div>
+    <div class="self-care-item">
+      <div class="self-care-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="1.6"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      </div>
+      <div class="self-care-label">自分のグリーフを知る</div>
+      <div class="self-care-body">スタッフ自身も喪失体験を持つ。自分がどんな喪失に影響されやすいかを知ることが自己管理の基本</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ===== TAKEAWAY ===== -->
+<section>
+<div class="section">
+  <div class="section-num">SUMMARY</div>
+  <h2 class="section-title">この資料のまとめ</h2>
+  <div class="takeaway">
+    <div class="takeaway-title">就労移行スタッフとして知っておきたいこと</div>
+    <ul class="takeaway-items">
+      <li class="takeaway-item">
+        <div class="takeaway-dot"></div>
+        <div>グリーフは死別だけでなく、障害告知・離職・キャリア喪失など幅広い喪失に生じる自然な反応である</div>
+      </li>
+      <li class="takeaway-item">
+        <div class="takeaway-dot"></div>
+        <div>感情・身体・認知・行動の4層で現れ、表出の仕方には大きな個人差がある</div>
+      </li>
+      <li class="takeaway-item">
+        <div class="takeaway-dot"></div>
+        <div>キューブラー＝ロスの5段階説は参考になるが、「順番に進む」という使い方は誤りで現場では慎重に扱う</div>
+      </li>
+      <li class="takeaway-item">
+        <div class="takeaway-dot"></div>
+        <div>二重過程モデル（DPM）：「悲しむ時間」と「前向きになれる時間」の間で揺れ動くことが健康的な悲嘆である</div>
+      </li>
+      <li class="takeaway-item">
+        <div class="takeaway-dot"></div>
+        <div>失ったものとの「継続する絆」は断ち切るべきものではなく、形を変えて意味を持ち続ける</div>
+      </li>
+      <li class="takeaway-item">
+        <div class="takeaway-dot"></div>
+        <div>DSM-5-TR（2022）で「遷延性悲嘆障害（PGD）」が正式収載。12ヶ月以上の強度の悲嘆症状は専門家連携のサイン</div>
+      </li>
+      <li class="takeaway-item">
+        <div class="takeaway-dot"></div>
+        <div>スタッフ自身も共感疲労のリスクがあり、自己モニタリングとスーパービジョンの活用が重要</div>
+      </li>
+    </ul>
+  </div>
+</div>
+</section>
+
+<!-- ===== SOURCES ===== -->
+<section class="sources-section">
+  <div class="sources-inner">
+    <div class="sources-title">参考文献・情報ソース</div>
+    <div class="sources-sub">本資料はすべてエビデンスベースの文献に基づいています。引用先はクリックでアクセス可能です（英語文献含む）。</div>
+    <ul class="sources-list">
+      <li>
+        Kübler-Ross, E. (1969). <em>On Death and Dying.</em> Macmillan.<br>
+        — 5段階モデルの原著。のちに本人が「固定した段階とは意図していなかった」と述べた（On Grief and Grieving, 2005）
+      </li>
+      <li>
+        Worden, J. W. (2018). <em>Grief Counseling and Grief Therapy: A Handbook for the Mental Health Practitioner</em> (5th ed.). Springer.<br>
+        — 悲嘆の課題モデルの主要テキスト
+      </li>
+      <li>
+        Stroebe, M., & Schut, H. (1999). The dual process model of coping with bereavement: Rationale and description. <em>Death Studies, 23</em>(3), 197–224.<br>
+        <a href="https://doi.org/10.1080/074811899201046" target="_blank">https://doi.org/10.1080/074811899201046</a>
+      </li>
+      <li>
+        Klass, D., Silverman, P. R., & Nickman, S. L. (1996). <em>Continuing Bonds: New Understandings of Grief.</em> Taylor & Francis.<br>
+        — 継続する絆の概念を体系化した著作
+      </li>
+      <li>
+        Maciejewski, P. K., Zhang, B., Block, S. D., & Prigerson, H. G. (2007). An empirical examination of the stage theory of grief. <em>JAMA, 297</em>(7), 716–723.<br>
+        <a href="https://doi.org/10.1001/jama.297.7.716" target="_blank">https://doi.org/10.1001/jama.297.7.716</a>
+      </li>
+      <li>
+        American Psychiatric Association. (2022). <em>Diagnostic and Statistical Manual of Mental Disorders</em> (5th ed., Text Rev.; DSM-5-TR).<br>
+        — 遷延性悲嘆障害（Prolonged Grief Disorder）の診断基準を初収載
+      </li>
+      <li>
+        Shear, M. K., et al. (2011). Complicated grief and related bereavement issues for DSM-5. <em>Depression and Anxiety, 28</em>(2), 103–117.<br>
+        <a href="https://doi.org/10.1002/da.20780" target="_blank">https://doi.org/10.1002/da.20780</a>
+      </li>
+      <li>
+        Shear, M. K., Frank, E., Houck, P. R., &amp; Reynolds, C. F. (2005). Treatment of complicated grief: A randomized controlled trial. <em>JAMA, 293</em>(21), 2601–2608.<br>
+        — CGTが対人療法より高い反応率を示した最初のRCT
+      </li>
+      <li>
+        Shear, M. K., et al. (2014). Treatment of complicated grief in elderly persons: A randomized clinical trial. <em>JAMA Psychiatry, 71</em>(11), 1287–1295.<br>
+        — 高齢者対象のCGT有効性RCT</li>
+      <li>
+        Figley, C. R. (1995). <em>Compassion Fatigue: Coping with Secondary Traumatic Stress Disorder in Those Who Treat the Traumatized.</em> Brunner/Mazel.<br>
+        — 共感疲労の概念を確立した著作
+      </li>
+      <li>
+        Stroebe, M., et al. (1996). Coping with bereavement: A review of the grief work hypothesis. <em>Omega: Journal of Death and Dying, 26</em>(1), 19–42.<br>
+        — グリーフの表出スタイルの個人差・文化差を論じた主要論文
+      </li>
+      <li>
+        国立精神・神経医療研究センター（NCNP）グリーフ関連情報<br>
+        <a href="https://www.ncnp.go.jp" target="_blank">https://www.ncnp.go.jp</a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<footer class="footer">
+  岡村雄一郎
+</footer>
+
+<script>
+// Progress navigation
+const sections = ['s0','s1','s2','s3','s4','s5','s6','s7','s8'];
+const dots = document.querySelectorAll('.prog-dot');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const id = entry.target.id;
+      const idx = sections.indexOf(id);
+      if (idx !== -1) {
+        dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+      }
+    }
+  });
+}, { threshold: 0.3 });
+
+sections.forEach(id => {
+  const el = document.getElementById(id);
+  if (el) observer.observe(el);
+});
+
+dots.forEach((dot, idx) => {
+  dot.addEventListener('click', () => {
+    const el = document.getElementById(sections[idx]);
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+</script>
+</body>
+</html>
